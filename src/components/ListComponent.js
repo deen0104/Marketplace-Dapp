@@ -11,6 +11,7 @@ const Products = (props) => {
                     <tr>
                         <th>#</th>
                         <th>Name</th>
+                        <th>Category</th>
                         <th>Price (Wei)</th>
                         <th>Owner</th>
                         <th>Status</th>
@@ -22,6 +23,7 @@ const Products = (props) => {
                             <tr key={key}>
                                 <th>{product.id}</th>
                                 <td>{product.name}</td>
+                                <td>{product.category}</td>
                                 <td>{product.price}</td>
                                 <td>{product.owner}</td>
                                 <td>
