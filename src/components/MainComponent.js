@@ -46,10 +46,10 @@ class Main extends Component {
         await this.loadBlockchainData();
     }
 
-    createProduct(name, price) {
+    createProduct(name, price, category) {
         this.setState({ loading: true });
         
-        this.state.marketplace.methods.createProduct(name, price)
+        this.state.marketplace.methods.createProduct(name, price, category)
             .send({ from: this.state.account })
             .once('receipt', (receipt) => {
                 this.setState({ loading: false });
