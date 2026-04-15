@@ -46,9 +46,13 @@ class Main extends Component {
         await this.loadBlockchainData();
     }
 
+    // Enhanced createProduct method now includes category parameter
+    // Improvement: Method now handles three parameters (name, price, category) for richer product data
     createProduct(name, price, category) {
         this.setState({ loading: true });
         
+        // Smart contract call updated to pass category along with name and price
+        // This sends the complete product data to the blockchain
         this.state.marketplace.methods.createProduct(name, price, category)
             .send({ from: this.state.account })
             .once('receipt', (receipt) => {

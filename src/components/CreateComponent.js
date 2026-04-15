@@ -9,10 +9,12 @@ const Create = (props) => {
             <Form onSubmit={(event) => {
                 event.preventDefault();
                 const data = new FormData(event.target);
+                // Enhanced form submission: now passes category to smart contract
+                // Improvement: Category data is captured from form and sent along with name and price
                 props.createProduct(
                     data.get('productName'),
                     window.web3.utils.toWei(data.get('productPrice')).toString(),
-                    data.get('productCategory')
+                    data.get('productCategory')  // New parameter passed to contract
                 );
             }}>
                 <Form.Group as={Row} controlId="formProductName">
@@ -27,6 +29,8 @@ const Create = (props) => {
                     </Col>
                 </Form.Group>
 
+                {/* New Form Group: Category input field */}
+                {/* Improvement: Users can now specify product category during creation */}
                 <Form.Group as={Row} controlId="formProductCategory">
                     <Form.Label column sm="1">Category</Form.Label>
                     <Col sm="4">
