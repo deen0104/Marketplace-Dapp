@@ -1,0 +1,56 @@
+ganache v7.9.1 (@ganache/cli: 0.10.1, @ganache/core: 0.10.1)
+Starting RPC server
+
+Available Accounts
+==================
+(0) 0x69bD63f1fd17d64bA48FDE08A689F7D829C9ef2D (1000 ETH)
+(1) 0xf6D98c8b7D278CD33AdBE65e46F4c4a872a37F0B (1000 ETH)
+(2) 0xde5428760b1153359C8198a826aff1b67570d434 (1000 ETH)
+(3) 0x2F9908Db1AB81623c2c8e58C11262B1dC5853E06 (1000 ETH)
+(4) 0x90D86E417452fa3Ed4bfF96E35DE45bFd23A2DC5 (1000 ETH)
+(5) 0x6392Fe7100D64340856BA40a97E78a1f31889F65 (1000 ETH)
+(6) 0x943A8f92FB14e98f8CF1dE313CB7824Eed4b6441 (1000 ETH)
+(7) 0xA836cD06970E02DE214439A211E964F0e2770C8D (1000 ETH)
+(8) 0xC4140ae9215e9C799Bb89454a6d2eB8F1a17c4D5 (1000 ETH)
+(9) 0x400ad905B3ef0CaF495698BdD92c07388Cc1857d (1000 ETH)
+
+Private Keys
+==================
+(0) 0x8038f1cd77210c7644d07ddb686272cea55bea8bbc1ffb3220d241739daacd29
+(1) 0xac169fb9265b757958ccfde09b222ef1b76c8f0b85009eab3024fac63b6ce0e2
+(2) 0x4c8b52e8c8c3813f4ca44f8c231ffce16bd5d7589771b80829e77ac344bcc8a0
+(3) 0x20f2e8674775bf5e7ade128e3805b6c8a121c3026b7b8149b1d99dfeda8518da
+(4) 0xcd212ddb3bdf1e746b82358a2bbfe4a0da12fd5bf9177b3dbc9ee5b2f7f649ef
+(5) 0xaa4b27fa378f21fb34d3d98ff416a6a0c2d0c9d47639fd0f05476b10dee84b95
+(6) 0xd2420041ae5f7970aefde0108a8e1591c0eade7b1fba488755fef5b8d2312fe7
+(7) 0x7ccbb7b12fe090e6fb79ceef46f94fedb483c7c557df0df52e0673ca5063df4a
+(8) 0x1d273590c1a4bb0c3c338792e4205edabbe102f85dab75e9e608a36a63c3b859
+(9) 0xdb41b46cf686f23e7e652f6f54a7bb8719f83114255922076bd98dd85a643a55
+
+HD Wallet
+==================
+Mnemonic:      donor music arrive comfort coffee liar athlete helmet dog draw cram biology
+Base HD Path:  m/44'/60'/0'/0/{account_index}
+
+Default Gas Price
+==================
+2000000000
+
+BlockGas Limit
+==================
+30000000
+
+Call Gas Limit
+==================
+50000000
+
+Chain
+==================
+Hardfork: shanghai
+Id:       1337
+
+RPC Listening on 127.0.0.1:8545
+
+Received shutdown signal: SIGHUP
+Shutting down…
+Server has been shut down

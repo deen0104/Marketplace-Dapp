@@ -13,8 +13,9 @@ const Create = (props) => {
                 // Improvement: Category data is captured from form and sent along with name and price
                 props.createProduct(
                     data.get('productName'),
+                    data.get('productCategory'),  // New parameter passed to contract
                     window.web3.utils.toWei(data.get('productPrice')).toString(),
-                    data.get('productCategory')  // New parameter passed to contract
+                    'Ether'
                 );
             }}>
                 <Form.Group as={Row} controlId="formProductName">

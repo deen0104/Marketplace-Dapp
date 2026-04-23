@@ -1,0 +1,41 @@
+none : The term 'none' is not recognized as the name of a cmdlet, function, script file, or operable program. Check 
+the spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:30
++ $env:PORT=3002; $env:BROWSER=none; npm start
++                              ~~~~
+    + CategoryInfo          : ObjectNotFound: (none:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+ 
+Error: error:0308010C:digital envelope routines::unsupported
+    at new Hash (node:internal/crypto/hash:69:19)
+    at Object.createHash (node:crypto:133:10)
+    at module.exports (C:\Users\deena\Downloads\Marketplace-Dapp-mainnew\Marketplace-Dapp-main\Marketplace-Dapp-main\node_modules\webpack\lib\util\createHash.js:135:53)
+    at NormalModule._initBuildHash (C:\Users\deena\Downloads\Marketplace-Dapp-mainnew\Marketplace-Dapp-main\Marketplace-Dapp-main\node_modules\webpack\lib\NormalModule.js:417:16)
+    at handleParseError (C:\Users\deena\Downloads\Marketplace-Dapp-mainnew\Marketplace-Dapp-main\Marketplace-Dapp-main\node_modules\webpack\lib\NormalModule.js:471:10)
+    at C:\Users\deena\Downloads\Marketplace-Dapp-mainnew\Marketplace-Dapp-main\Marketplace-Dapp-main\node_modules\webpack\lib\NormalModule.js:503:5
+    at C:\Users\deena\Downloads\Marketplace-Dapp-mainnew\Marketplace-Dapp-main\Marketplace-Dapp-main\node_modules\webpack\lib\NormalModule.js:358:12
+    at C:\Users\deena\Downloads\Marketplace-Dapp-mainnew\Marketplace-Dapp-main\Marketplace-Dapp-main\node_modules\loader-runner\lib\LoaderRunner.js:373:3
+    at iterateNormalLoaders (C:\Users\deena\Downloads\Marketplace-Dapp-mainnew\Marketplace-Dapp-main\Marketplace-Dapp-main\node_modules\loader-runner\lib\LoaderRunner.js:214:10)
+    at iterateNormalLoaders (C:\Users\deena\Downloads\Marketplace-Dapp-mainnew\Marketplace-Dapp-main\Marketplace-Dapp-main\node_modules\loader-runner\lib\LoaderRunner.js:221:10)
+C:\Users\deena\Downloads\Marketplace-Dapp-mainnew\Marketplace-Dapp-main\Marketplace-Dapp-main\node_modules\react-scripts\scripts\start.js:19
+  throw err;
+  ^
+
+Error: error:0308010C:digital envelope routines::unsupported
+    at new Hash (node:internal/crypto/hash:69:19)
+    at Object.createHash (node:crypto:133:10)
+    at module.exports (C:\Users\deena\Downloads\Marketplace-Dapp-mainnew\Marketplace-Dapp-main\Marketplace-Dapp-main\node_modules\webpack\lib\util\createHash.js:135:53)
+    at NormalModule._initBuildHash (C:\Users\deena\Downloads\Marketplace-Dapp-mainnew\Marketplace-Dapp-main\Marketplace-Dapp-main\node_modules\webpack\lib\NormalModule.js:417:16)
+    at C:\Users\deena\Downloads\Marketplace-Dapp-mainnew\Marketplace-Dapp-main\Marketplace-Dapp-main\node_modules\webpack\lib\NormalModule.js:452:10
+    at C:\Users\deena\Downloads\Marketplace-Dapp-mainnew\Marketplace-Dapp-main\Marketplace-Dapp-main\node_modules\webpack\lib\NormalModule.js:323:13
+    at C:\Users\deena\Downloads\Marketplace-Dapp-mainnew\Marketplace-Dapp-main\Marketplace-Dapp-main\node_modules\loader-runner\lib\LoaderRunner.js:367:11
+    at C:\Users\deena\Downloads\Marketplace-Dapp-mainnew\Marketplace-Dapp-main\Marketplace-Dapp-main\node_modules\loader-runner\lib\LoaderRunner.js:233:18
+    at context.callback (C:\Users\deena\Downloads\Marketplace-Dapp-mainnew\Marketplace-Dapp-main\Marketplace-Dapp-main\node_modules\loader-runner\lib\LoaderRunner.js:111:13)
+    at C:\Users\deena\Downloads\Marketplace-Dapp-mainnew\Marketplace-Dapp-main\Marketplace-Dapp-main\node_modules\babel-loader\lib\index.js:59:103 {
+  opensslErrorStack: [ 'error:03000086:digital envelope routines::initialization error' ],
+  library: 'digital envelope routines',
+  reason: 'unsupported',
+  code: 'ERR_OSSL_EVP_UNSUPPORTED'
+}
+
+Node.js v18.20.8

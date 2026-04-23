@@ -11,8 +11,8 @@ contract Marketplace {
     struct Product {
         uint id;
         string name;
-        uint price;
         string category;  // New field: stores product category for classification
+        uint price;
         address payable owner;
         bool purchased;
     }
@@ -22,8 +22,8 @@ contract Marketplace {
     event ProductCreated (
         uint id,
         string name,
-        uint price,
         string category,  // New parameter: allows clients to track category on product creation
+        uint price,
         address payable owner,
         bool purchased
     );
@@ -43,19 +43,19 @@ contract Marketplace {
 
     // Enhanced createProduct function now accepts category parameter
     // Improvement: Function signature updated to include _category, enabling product categorization
-    function createProduct(string memory _name, uint _price, string memory _category) public {
+    function createProduct(string memory _name, string memory _category, uint _price) public {
         require(bytes(_name).length > 0, "Product name cannot be blank");
-        require(_price > 0, "Product price should be greater than 0");
         // New validation: category field cannot be blank, ensuring complete product data
         require(bytes(_category).length > 0, "Product category cannot be blank");
+        require(_price > 0, "Product price should be greater than 0");
 
         productCount++;
 
         // Category is now stored on-chain as part of product data
-        products[productCount] = Product(productCount, _name, _price, _category, msg.sender, false);
+        products[productCount] = Product(productCount, _name, _category, _price, msg.sender, false);
 
         // Enhanced event emission now includes category for frontend tracking
-        emit ProductCreated(productCount, _name, _price, _category, msg.sender, false);
+        emit ProductCreated(productCount, _name, _category, _price, msg.sender, false);
     }
 
     function purchaseProduct(uint _id) public payable {

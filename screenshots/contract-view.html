@@ -1,0 +1,59 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Marketplace.sol</title>
+<style>
+body{margin:0;background:#f5f2ea;color:#1f2937;font-family:Consolas, 'Courier New', monospace}
+header{padding:18px 24px;background:#1f2937;color:#f9fafb;font:600 20px/1.3 Segoe UI,sans-serif}
+main{padding:20px}
+pre{margin:0;padding:20px;background:#fff;border:1px solid #d1d5db;border-radius:10px;white-space:pre-wrap;font-size:16px;line-height:1.45}
+.note{padding:0 24px 18px;color:#374151;font:14px/1.4 Segoe UI,sans-serif}
+</style></head><body>
+<header>Marketplace.sol</header>
+<div class="note">Excerpt showing the <code>Product</code> struct with <code>category</code> and the <code>createProduct</code> function.</div>
+<main><pre>  6      uint public productCount;
+  7      mapping(uint =&gt; Product) public products;
+  8  
+  9      // Enhanced Product struct with category field
+ 10      // Improvement: Added category to provide richer product metadata beyond name and price
+ 11      struct Product {
+ 12          uint id;
+ 13          string name;
+ 14          string category;  // New field: stores product category for classification
+ 15          uint price;
+ 16          address payable owner;
+ 17          bool purchased;
+ 18      }
+ 19  
+ 20      // Enhanced ProductCreated event with category parameter
+ 21      // Improvement: Event now emits category data for frontend to capture and display
+ 22      event ProductCreated (
+ 23          uint id,
+ 24          string name,
+ 25          string category,  // New parameter: allows clients to track category on product creation
+ 26          uint price,
+ 27          address payable owner,
+ 28          bool purchased
+ 29      );
+ 30  
+ 31      event ProductPurchased (
+ 32          uint id,
+ 33          string name,
+ 34          uint price,
+ 35          address payable seller,
+ 36          address buyer,
+ 37          bool purchased
+ 38      );
+ 39  
+ 40      constructor() public {
+ 41          name = "My Marketplace";
+ 42      }
+ 43  
+ 44      // Enhanced createProduct function now accepts category parameter
+ 45      // Improvement: Function signature updated to include _category, enabling product categorization
+ 46      function createProduct(string memory _name, string memory _category, uint _price) public {
+ 47          require(bytes(_name).length &gt; 0, "Product name cannot be blank");
+ 48          // New validation: category field cannot be blank, ensuring complete product data
+ 49          require(bytes(_category).length &gt; 0, "Product category cannot be blank");
+ 50          require(_price &gt; 0, "Product price should be greater than 0");
+ 51  
+ 52          productCount++;</pre></main>
+</body></html>
